@@ -1,25 +1,35 @@
 pragma solidity 0.4.25;
 
 contract first{
-    int bal;
+    int unique_id;
+    string name;
+    int256 secret_key;
+    
+    
+    
     constructor() public
     {
         
-        bal = 1;
+        unique_id = 2;
+        name = "Pradhyum";
+        
+        secret_key =891516518461651961181196;  
     }
-    function getBal() view public returns(int)
+    
+    
+    function getUnique() view public returns(int)
     {
-        return bal;
+        return unique_id;
          
     }
-    function withDraw(int amt)public
+    function getName() view public returns(string)
     {
-        bal = bal - amt;
+        return name;
+         
     }
-    
-    function deposit(int amt) public
+       function getSec() view public returns(int256)
     {
-        bal = bal + amt;
+        return secret_key;
+         
     }
-    
 }
